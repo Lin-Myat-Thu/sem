@@ -15,6 +15,10 @@ public class App {
 
         // Test the size of the returned data - should be 240124
         System.out.println(employees.size());
+
+        //Display Employee Salaries
+        a.printSalaries(employees);
+
         // Get Employee
 //        Employee emp = a.getEmployee(255530);
         // Display results
@@ -162,6 +166,23 @@ public class App {
                             + "Salary:" + emp.salary + "\n"
                             + emp.dept_name + "\n"
                             + "Manager: " + emp.manager + "\n");
+        }
+    }
+    /**
+     * Prints a list of employees.
+     * @param employees The list of employees to print.
+     */
+    public void printSalaries(ArrayList<Employee> employees)
+    {
+        // Print header
+        System.out.println(String.format("%-10s %-15s %-20s %-8s", "Emp No", "First Name", "Last Name", "Salary"));
+        // Loop over all employees in the list
+        for (Employee emp : employees)
+        {
+            String emp_string =
+                    String.format("%-10s %-15s %-20s %-8s",
+                            emp.emp_no, emp.first_name, emp.last_name, emp.salary);
+            System.out.println(emp_string);
         }
     }
 
