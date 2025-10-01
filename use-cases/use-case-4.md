@@ -39,7 +39,7 @@ A request for finance information is sent to HR.
 
 
 3. Role does not exist:
-   i. HR advisor informs finance no role exists.
+- HR advisor informs finance no role exists.
 
 ### SUB-VARIATIONS
 
