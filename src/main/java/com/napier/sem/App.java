@@ -10,7 +10,7 @@ public class App {
 
         // Connect to database
         if(args.length < 1){
-            a.connect("localhost:33060",3000);
+            a.connect("localhost:33060",5000);
         }else {
             a.connect(args[0],Integer.parseInt(args[1]));
         }
@@ -22,7 +22,7 @@ public class App {
         a.displayDepartmentSalaries(salesDept);
 
         // Get Employee info by thier first and last name
-        Employee emp = a.getEmployeeByName("Maja","Lamba");
+        Employee emp = a.getEmployeeByName("Ronghao","Garigliano");
         //Print Employee info
         a.displayEmployee(emp);
 
