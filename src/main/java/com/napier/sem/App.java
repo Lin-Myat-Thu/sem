@@ -16,7 +16,9 @@ public class App {
         //Print salaries by department
         a.displayDepartmentSalaries(salesDept);
 
+        // Get Employee info by thier first and last name
         Employee emp = a.getEmployeeByName("Maja","Lamba");
+        //Print Employee info
         a.displayEmployee(emp);
 
         // Extract employee salary information
@@ -313,11 +315,19 @@ public class App {
      */
     public void printSalaries(ArrayList<Employee> employees)
     {
+        //Check Employee is not null
+        if(employees == null){
+            System.out.printf("No employees found.");
+            return;
+        }
         // Print header
         System.out.println(String.format("%-10s %-15s %-20s %-8s", "Emp No", "First Name", "Last Name", "Salary"));
         // Loop over all employees in the list
         for (Employee emp : employees)
         {
+            if(emp == null){
+                continue;
+            }
             String emp_string =
                     String.format("%-10s %-15s %-20s %-8s",
                             emp.emp_no, emp.first_name, emp.last_name, emp.salary);
@@ -346,6 +356,8 @@ public class App {
             System.out.println("No employees found in this department.");
         }
     }
+
+
 
 
 
