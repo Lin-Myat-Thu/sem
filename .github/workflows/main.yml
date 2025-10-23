@@ -38,7 +38,15 @@ jobs:
           mvn -Dtest=com.napier.sem.AppIntegrationTest test
           docker stop employees
           docker rm employees
-          docker image rm database          
+          docker image rm database
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+#          token: ${{ secrets.CODECOV_TOKEN }}
+            directory: ./target/site/jacoco
+            flags: Integration Tests # optional
+            verbose: true # optional (default = false)
+
 
   build:
     name: Build and Start Using docker-compose
@@ -57,6 +65,7 @@ jobs:
         run: |
           mvn package -DskipTests
           docker compose up --abort-on-container-exit
+          
   
           
 
