@@ -6,3 +6,5 @@
 
 # DevOps
 ![GitHub Workflow Status (develop)](https://img.shields.io/github/actions/workflow/status/Lin-Myat-Thu/sem/main.yml?branch=develop&style=flat-square)
+
+[![codecov](https://codecov.io/github/Lin-Myat-Thu/sem/graph/badge.svg?token=PC8LB0Y0YJ)](https://codecov.io/github/Lin-Myat-Thu/sem)
