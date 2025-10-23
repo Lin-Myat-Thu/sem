@@ -4,7 +4,8 @@ services:
   app:
     build: .
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   # db is is db folder
   db:
