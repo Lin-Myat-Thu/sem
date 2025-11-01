@@ -1,5 +1,8 @@
 name: A workflow for my Hello World App
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   UnitTests:
@@ -51,6 +54,8 @@ jobs:
   build:
     name: Build Run in Docker and Deploy Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
